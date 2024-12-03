@@ -8,8 +8,35 @@
     <script src="projectJS.js" defer></script>
 </head>
 <body>
-    <img src="Build Your Meal Plan.png" width="950px" height="350px">
-    
+    <img src="boykisser-spin.gif" class="left">
+    <img src="boykisser-spin.gif" class="right">
+
+    <div class = "banner"></div>
+    <!--the amoiunt of documentation i was scrubbing through i HATE css just cause i wanted to make everyting all centered and pretty -->
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .banner {
+            background-image: url("Build\ Your\ Meal\ Plan.png");
+            height: 350px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            width: 750px;
+
+        }
+        .left {
+            position: absolute; left: 10px; top: 40%
+        }
+        .right {
+            position: absolute; right: 10px; top: 40%
+        }
+    </style>
     <form id = "Form" onsubmit="return validateForm()">
     <h2><b>Personal Info</b></h2>
     <input type="text" id="name" placeholder="Name"><br><br>
