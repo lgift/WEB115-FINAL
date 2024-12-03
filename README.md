@@ -1,4 +1,6 @@
+<p align="center">
 ## WEB115-FINAL
+</p>
 
 # OVERVIEW
 This programs takes in input for person's personal information and their planned out meals for the week ranging from Breakfast to Dinner.
