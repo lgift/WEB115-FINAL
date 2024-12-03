@@ -7,7 +7,7 @@
     <title>WEB-115 Final Project</title>
     <script src="projectJS.js" defer></script>
 </head>
-<body>
+<body style="background-image: url(silly.png);">
     <img src="boykisser-spin.gif" class="left">
     <img src="boykisser-spin.gif" class="right">
 
@@ -15,6 +15,7 @@
     <!--the amoiunt of documentation i was scrubbing through i HATE css just cause i wanted to make everyting all centered and pretty -->
     <style>
         body {
+            font-family: 'Comic Sans MS', cursive;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -38,11 +39,11 @@
         }
     </style>
     <form id = "Form" onsubmit="return validateForm()">
-    <h2><b>Personal Info</b></h2>
+    <h2 style="text-align: center"><b>Personal Info</b></h2>
     <input type="text" id="name" placeholder="Name"><br><br>
     <input type="email" id="email" name="emailz" placeholder="Email"><br><br>
     <input type="text" id="Goal" placeholder="Goal"><br><br>
-    <h2><b>Meals</b></h2>
+    <h2 style="text-align: center"><b>Meals</b></h2>
     <input type="text" id="breakfast" placeholder="Breakfast"><br><br>
     <input type="text" id="snack1" placeholder="Snack"><br><br>
     <input type="text" id="lunch" placeholder="Lunch"><br><br>

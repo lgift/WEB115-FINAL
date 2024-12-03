@@ -9,8 +9,9 @@ var yay = new Audio ('yay.mp3')
 var meow = new Audio ('meow.mp3')
 
 backgroundMusic.loop = true
-backgroundMusic.volume = 0.5
+backgroundMusic.volume = 0.6
 backgroundMusic.play()
+meow.play()
 
 let form = document.getElementById("Form")
 let breakfast = document.getElementById("breakfast")
@@ -39,6 +40,11 @@ function validateForm() {
 }
 function generate() {
 
+    var sillyImage = document.createElement("IMG")
+    sillyImage.setAttribute("src", "guh.gif")
+    sillyImage.setAttribute("width", "200px")
+    sillyImage.setAttribute("height", "200px")
+
     let name = document.getElementById("name").value
     let email = document.forms["Form"]["emailz"].value
     let goal = document.getElementById("Goal").value
@@ -49,6 +55,7 @@ function generate() {
 
     // clears webpage
     document.body.innerHTML = ''
+    document.body.appendChild(sillyImage)
 
     // Aligns celebration gifts with css to be on both sides of the screen
     document.body.style.display = 'flex'
@@ -58,33 +65,14 @@ function generate() {
     document.body.style.padding = '20px'
     document.body.style.textAlign = 'center'
 
-    let left = document.createElement("img")
-    left.src = "bear-confetti.gif"
-    left.style.position = 'absolute'
-    left.style.left = '10px'
-    left.style.top = '40%'
-    left.style.width = '350px'
-
-    let right = document.createElement("img")
-    right.src = "bear-confetti.gif"
-    right.style.position = 'absolute'
-    right.style.right = '10px'
-    right.style.top = '40%'
-    right.style.width = '350px'
-
-    document.body.appendChild(left)
-    document.body.appendChild(right)
-
-    // centers the text elements
-    document.body.style.textAlign = 'center'
-
     let info = document.createElement("div")
     info.innerHTML =
-        `<h2><b>WEEKLY MEAL PLAN!<b><h2>
+        `<h2><b>WEEKLY MEAL PLAN!<b></h2>
         <p><b>Name:</b> ${name}</p>
         <p><b>Email:</b> ${email}</p>
         <p><b>Goal:</b> ${goal}</p>
         `
+    info.style.color = 'darkblue'
 
     document.body.appendChild(info)
 
@@ -92,16 +80,18 @@ function generate() {
     let table = document.createElement("TABLE")
     table.setAttribute("id", "Table")
     table.setAttribute("border", "5")
+    table.style.backgroundColor= '#f0f0f0'
+    table.style.borderSpacing = '2px'
 
     // centers the table
     table.style.margin = '0 auto'
 
     // creates days of the week as headers
     let headers = document.createElement("TR")
-    let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    let days = ["MEALS", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
     // adds each element in the days array to the TR element to create headers
-    for (let i = 0; i < 7; i++) {
+    for (let i = 0; i < 8; i++) {
         let dayname = document.createElement("TH")
         dayname.textContent = days[i]
         headers.appendChild(dayname)
@@ -120,7 +110,7 @@ function generate() {
         row.appendChild(inputs)
 
         // adds each meal input/value to the table
-        for (let z = 0; z < 6; z++) {
+        for (let z = 0; z < 7; z++) {
             var food = document.createElement("TD")
             food.textContent = mealInput[i]
             row.appendChild(food)
@@ -138,10 +128,17 @@ function generate() {
     let clear = document.createElement("button")
     clear.textContent = "CLEAR PLAN???"
     clear.onclick = () => location.reload()
+    
 
     document.body.appendChild(table)
     document.body.appendChild(print)
     document.body.appendChild(clear)
+
+    document.getElementById("Table").style.fontFamily = "'Comic Sans MS', cursive"
+    document.body.style.fontFamily = "'Comic Sans MS', cursive"
+    document.body.style.backgroundColor = "LemonChiffon"
+    document.body.style.backgroundImage = "url('confet.gif')"
+
 
     backgroundMusic.pause()
     victoryMusic.loop = true
