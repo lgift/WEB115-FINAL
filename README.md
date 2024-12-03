@@ -1,4 +1,4 @@
-## <p align="center">
+<p align="center">
 WEB115-FINAL
 </p>
 
