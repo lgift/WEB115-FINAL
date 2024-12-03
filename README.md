@@ -5,4 +5,4 @@ This programs takes in input for person's personal information and their planned
 
 Once inputted, a copy of the person's information and a structured table is output back to provide an organized meal plan for the week Monday - Sunday, with the option to print/download their created meal plan, or to clear the form and the table.
 
-![hi](furry-boykisser.png)
+![hi](furry-boykisser.gif)
