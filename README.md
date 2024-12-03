@@ -1,5 +1,5 @@
-<p align="center">
-## WEB115-FINAL
+## <p align="center">
+WEB115-FINAL
 </p>
 
 # OVERVIEW
